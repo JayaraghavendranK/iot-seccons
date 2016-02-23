@@ -1168,6 +1168,41 @@ gateway may suffice to enable mobile IoT networks, such as body sensor networks.
  However, if individual things change their point of network attachment while
 communicating, mobility support may gain importance.
 
+### Authorization & Fine Grained Access Control for Multiple Users {#sec5-3-4}
+
+Multiple Users with different levels of ownership over the devices / IoT networks will be a common scenario in IoT. The level of ownerships could change over a period of time. Users constitute both Humans & Things as noted elsewhere in this document. Users can be classified as temporary or permanent users depending upon the amount of time they are associated with the devices / networks.
+
+At a high level, users can be categorized as belonging to one of the below four types:
+
+(a) Permanent Users having Complete (or Full) Access
+-- This scenario is best summarized by a couple sharing an apartment where both are equal owners of their Home Automation Network having un-restricted / equal access to all devices in the apartment.
+
+(b) Permanent Users having Restricted (or Partial) Access
+-- This scenario can be summarized again in the case of Home Automation in a Home with Parents and Children, where Children though are permanent users, have restricted access over the network. They may have full access to their rooms, but, will be restricted in their access to other devices at home.
+
+(c) Temporary Users having Complete (of Full) Access
+-- Law Enforcement Personnel, Men belonging to Fire Services or Emergency Rescue Personnel involved in evacuation of building depict the scenario where complete access may be needed to the IoT network but, only temporarily. There could also be cases, where the owners may willingly give complete access to temporary users. For example owners may give complete access to guests staying over at home when owners of the home are away etc.
+
+(d) Temporary Users having Restricted (or Partial) Access
+-- Short Term Rented (or Serviced) Apartments / Hotels where users stay for a short while, but would need access to their place of stay outside their rented room / home come  under this category. This is also applicable for cases where guests visit home for a short while and want acess to devices in a home.
+
+Scenarios (c) & (d) are slightly more complicated as temporary users not only need to get the authenticated / authorized access to the network, but their rights should be revoked in a timely manner to avoid misuse by temporary users themselves or by some hacker who could hack into the temporary user's devices. Incase of temporary users, the data related to their usage of the devices or their private data stored in the devices also needs to be protected from other users or deleted upon their disassociation from the network. For example, incase of the Hotel Scenario, when users vacate their room, information related to usage should either be deleted or archived to a safe location to be deleted later.
+
+The following security aspects needs to be considered in the multi-user scenario:
+
+(a) Authentication & Authorization
+-- Users need to be provided with credentias to provide them appropriate (complete or partial) access to the network
+
+(b)Fine Grained Access Control
+--Temporary users who are given access to devices should not be allowed to alter certain pre-configured rules or change the basic settings of the device which may make it less secure
+
+(c) Revocation of Access
+-- Users who gain temporary access may try to utilize the permissions at a later point of time if their access is not revoked in a time bound manner. In some cases, deciding the amount of time may be difficult, in such cases, it may be more plausible to remove access once the user moves out of the network.
+
+(d)Data Privacy
+--Data or Information bout usage patterns of a device may be accessible to device owners even after the temporary users have left the network. This scenario is typical of a Hotel usage scenario, where after a user checks out of a hotel, the user's private data about usage of various  appliances may be available to the hotel.
+
+
 # Security Suites for the IP-based Internet of Things {#sec6}
 
 Different applications have different security requirements and needs and,
